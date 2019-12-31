@@ -13,10 +13,9 @@ public class astronaut : MonoBehaviour
     {
         r2d = GetComponent<Rigidbody2D>();
     }
-
-    // 更新事件:每秒執行約 60 次
     private void Update()
     {
-        r2d.AddForce(new Vector2(speed, 0));
+        Debug.Log(Input.GetAxis("Horizontal"));
+        r2d.AddForce(new Vector2(speed * Input.GetAxis("Horizontal"), 0));
     }
 }

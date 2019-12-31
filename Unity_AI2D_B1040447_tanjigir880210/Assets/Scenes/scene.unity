@@ -252,7 +252,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5904c90005012e04fb476b870f57bd26, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 50
+  speed: 20
   jump: 2.5
   astronautName: "\u592A\u7A7A\u4EBA"
   pass: 0
