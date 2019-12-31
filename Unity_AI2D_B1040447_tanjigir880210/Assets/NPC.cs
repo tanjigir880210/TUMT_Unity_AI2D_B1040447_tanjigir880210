@@ -29,12 +29,41 @@ public class NPC : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.tag == "太空人")
+            Say();
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.tag == "太空人")
+            SayClose();
+    }
+
+    /// <summary>
+    /// 對話:打字效果
+    /// </summary>
+    private void Say()
+    {
+        objCanvas.SetActive(true);
+
+        switch (_state)
         {
-            objCanvas.SetActive(true);
-            textSay.text = saystart;
-
-            print("玩家");
-
+            case state.normal:
+                textSay.text = saystart;
+                break;
+            case state.notComplete:
+                textSay.text = saynotcomplete;
+                break;
+            case state.complete:
+                textSay.text = saycomplete;
+                break;
         }
+    }
+
+    /// <summary>
+    /// 關閉對話
+    /// </summary>
+    private void SayClose()
+    {
+        objCanvas.SetActive(false);
     }
 }
