@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
-using UnityEngine.UI;
+using UnityEngine.UI;   
+using System.Collections;
 public class NPC : MonoBehaviour
 {
     public enum state
@@ -10,17 +11,17 @@ public class NPC : MonoBehaviour
     public state _state;
 
     [Header("對話內容")]
-    public string saystart = "KID呼叫太空人";
-    public string saynotcomplete = "我需要你幫我一件事";
+    public string saystart = "KID:我需要你幫我一件事";
+    public string saynotcomplete = "你還沒完成任務";
     public string saycomplete = "感謝你完成任務";
 
     [Header("對話速度")]
-    public float speed = 1.5f;
+    public float speed = 0.01f;
 
     [Header("任務相關")]
     public bool missingcomplete;
-    public string countPlayer;
-    public string countFinish = "10";
+    public int countPlayer;
+    public int countFinish = 10;
 
     [Header("介面")]
     public GameObject objCanvas;
@@ -44,26 +45,42 @@ public class NPC : MonoBehaviour
     private void Say()
     {
         objCanvas.SetActive(true);
+        StopAllCoroutines();
+
+        if (countPlayer >= countFinish) _state = state.complete;
 
         switch (_state)
         {
             case state.normal:
-                textSay.text = saystart;
+                StartCoroutine(ShowDialog(saystart));
+                _state = state.notComplete;
                 break;
             case state.notComplete:
-                textSay.text = saynotcomplete;
+                StartCoroutine(ShowDialog(saynotcomplete));
                 break;
             case state.complete:
-                textSay.text = saycomplete;
+                StartCoroutine(ShowDialog(saycomplete));
                 break;
         }
     }
 
-    /// <summary>
-    /// 關閉對話
-    /// </summary>
-    private void SayClose()
+    private IEnumerator ShowDialog(string say)
     {
+        textSay.text = "";                              
+
+        for (int i = 0; i < say.Length; i++)            
+        {
+            textSay.text += say[i].ToString();          
+            yield return new WaitForSeconds(speed);     
+        }
+    }
+
+        /// <summary>
+        /// 關閉對話
+        /// </summary>
+        private void SayClose()
+    {
+        StopAllCoroutines();
         objCanvas.SetActive(false);
     }
 }
