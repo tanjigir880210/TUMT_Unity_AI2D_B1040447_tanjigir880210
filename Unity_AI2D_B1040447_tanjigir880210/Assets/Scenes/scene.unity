@@ -253,9 +253,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 50
-  jump: 100
+  jump: 1400
   astronautName: "\u592A\u7A7A\u4EBA"
   pass: 0
+  isGround: 0
 --- !u!1 &672916494
 GameObject:
   m_ObjectHideFlags: 0

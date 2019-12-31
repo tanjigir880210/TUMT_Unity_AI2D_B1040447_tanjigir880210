@@ -7,6 +7,7 @@ public class astronaut : MonoBehaviour
     public float jump = 2.5f;
     public string astronautName = "太空人";
     public bool pass = false;
+    public bool isGround;
 
     private Rigidbody2D r2d;
     private void Start()
@@ -27,6 +28,12 @@ public class astronaut : MonoBehaviour
         Jump();
     }
 
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        isGround = true;
+        Debug.Log("碰到" + collision.gameObject);
+    }
+
     /// <summary>
     /// 走路
     /// </summary>
@@ -40,7 +47,11 @@ public class astronaut : MonoBehaviour
     /// </summary>
     private void Jump()
     {
-        r2d.AddForce(new Vector2(0, jump * Input.GetAxis("Jump")));
+        if (Input.GetKeyDown(KeyCode.Space) && isGround == true)
+        {
+            isGround = false;
+            r2d.AddForce(new Vector2(0, jump));
+        }
     }
 
     /// <summary>
