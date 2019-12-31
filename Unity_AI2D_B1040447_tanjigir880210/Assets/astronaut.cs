@@ -8,8 +8,15 @@ public class astronaut : MonoBehaviour
     public string astronautName = "太空人";
     public bool pass = false;
 
+    private Rigidbody2D r2d;
     private void Start()
     {
-        Debug.Log("呼叫太空人");
+        r2d = GetComponent<Rigidbody2D>();
+    }
+
+    // 更新事件:每秒執行約 60 次
+    private void Update()
+    {
+        r2d.AddForce(new Vector2(speed, 0));
     }
 }
