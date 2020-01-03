@@ -1,5 +1,5 @@
-﻿
-using UnityEngine;
+﻿using UnityEngine;
+using UnityEngine.Events;
 
 public class astronaut : MonoBehaviour
 {
@@ -8,6 +8,8 @@ public class astronaut : MonoBehaviour
     public string astronautName = "太空人";
     public bool pass = false;
     public bool isGround;
+
+    public UnityEvent onEat;
 
     private Rigidbody2D r2d;
     private void Start()
@@ -32,6 +34,15 @@ public class astronaut : MonoBehaviour
     {
         isGround = true;
         Debug.Log("碰到" + collision.gameObject);
+    }
+
+    private void  OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag == "水晶")
+        {
+            Destroy(collision.gameObject);
+            onEat.Invoke();
+        }
     }
 
     /// <summary>

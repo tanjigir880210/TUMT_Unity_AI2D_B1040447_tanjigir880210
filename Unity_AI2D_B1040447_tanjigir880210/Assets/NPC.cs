@@ -21,7 +21,7 @@ public class NPC : MonoBehaviour
     [Header("任務相關")]
     public bool missingcomplete;
     public int countPlayer;
-    public int countFinish = 10;
+    public int countFinish = 3;
 
     [Header("介面")]
     public GameObject objCanvas;
@@ -75,12 +75,20 @@ public class NPC : MonoBehaviour
         }
     }
 
-        /// <summary>
-        /// 關閉對話
-        /// </summary>
-        private void SayClose()
+    /// <summary>
+    /// 關閉對話
+    /// </summary>
+    private void SayClose()
     {
         StopAllCoroutines();
         objCanvas.SetActive(false);
+    }
+
+    /// <summary>
+    /// 玩家取得道具
+    /// </summary>
+    public void PlayerGet()
+    {
+        countPlayer++;
     }
 }
