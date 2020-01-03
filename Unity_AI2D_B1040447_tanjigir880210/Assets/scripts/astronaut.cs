@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.UI;
 
 public class astronaut : MonoBehaviour
 {
@@ -8,6 +9,13 @@ public class astronaut : MonoBehaviour
     public string astronautName = "太空人";
     public bool pass = false;
     public bool isGround;
+    [Header("血量"), Range(0, 200)]
+    public float hp = 100;
+
+    public Image hpBar;
+    public GameObject final;
+
+    private float hpMax;
 
     public UnityEvent onEat;
 
@@ -15,12 +23,11 @@ public class astronaut : MonoBehaviour
     private void Start()
     {
         r2d = GetComponent<Rigidbody2D>();
+        hpMax = hp;
     }
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.A)) Turn(180);
-        if (Input.GetKeyDown(KeyCode.D)) Turn(0);
         if (Input.GetKeyDown(KeyCode.LeftArrow)) Turn(180);
         if (Input.GetKeyDown(KeyCode.RightArrow)) Turn(0);
     }
@@ -72,5 +79,17 @@ public class astronaut : MonoBehaviour
     private void Turn(int direction = 0)
     {
         transform.eulerAngles = new Vector3(0, direction, 0);
+    }
+
+    public void Damage(float damage)
+    {
+        hp -= damage;
+        hpBar.fillAmount = hp / hpMax;
+
+        if (hp <= 0)
+        {
+            final.SetActive(true);
+            Destroy(this);
+        }
     }
 }
