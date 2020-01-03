@@ -804,6 +804,7 @@ GameObject:
   - component: {fileID: 911515254}
   - component: {fileID: 911515253}
   - component: {fileID: 911515252}
+  - component: {fileID: 911515255}
   m_Layer: 0
   m_Name: "\u9B54\u738B"
   m_TagString: Untagged
@@ -868,9 +869,10 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 911515249}
   m_LocalRotation: {x: -0, y: -0, z: -0.0010357928, w: 0.99999946}
-  m_LocalPosition: {x: 28.09, y: -0.45, z: 0}
+  m_LocalPosition: {x: 36.94, y: -0.47, z: 0}
   m_LocalScale: {x: 1.9620064, y: 1.9620064, z: 1.9620064}
-  m_Children: []
+  m_Children:
+  - {fileID: 1837123867}
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -0.119}
@@ -927,6 +929,21 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &911515255
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 911515249}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9166fed38794da04297736ed30093803, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5
+  damage: 20
+  checkPoint: {fileID: 1837123867}
 --- !u!1 &1135093931
 GameObject:
   m_ObjectHideFlags: 0
@@ -1285,7 +1302,7 @@ Tilemap:
       m_ObjectToInstantiate: {fileID: 0}
       m_TileFlags: 1
       m_ColliderType: 1
-  - first: {x: 141, y: -12, z: 0}
+  - first: {x: 127, y: -12, z: 0}
     second:
       m_TileIndex: 0
       m_TileSpriteIndex: 0
@@ -1294,7 +1311,7 @@ Tilemap:
       m_ObjectToInstantiate: {fileID: 0}
       m_TileFlags: 1
       m_ColliderType: 1
-  - first: {x: 146, y: -12, z: 0}
+  - first: {x: 132, y: -12, z: 0}
     second:
       m_TileIndex: 0
       m_TileSpriteIndex: 0
@@ -1303,7 +1320,7 @@ Tilemap:
       m_ObjectToInstantiate: {fileID: 0}
       m_TileFlags: 1
       m_ColliderType: 1
-  - first: {x: 151, y: -12, z: 0}
+  - first: {x: 137, y: -12, z: 0}
     second:
       m_TileIndex: 0
       m_TileSpriteIndex: 0
@@ -1312,7 +1329,7 @@ Tilemap:
       m_ObjectToInstantiate: {fileID: 0}
       m_TileFlags: 1
       m_ColliderType: 1
-  - first: {x: 156, y: -12, z: 0}
+  - first: {x: 142, y: -12, z: 0}
     second:
       m_TileIndex: 0
       m_TileSpriteIndex: 0
@@ -1321,7 +1338,7 @@ Tilemap:
       m_ObjectToInstantiate: {fileID: 0}
       m_TileFlags: 1
       m_ColliderType: 1
-  - first: {x: 161, y: -12, z: 0}
+  - first: {x: 147, y: -12, z: 0}
     second:
       m_TileIndex: 0
       m_TileSpriteIndex: 0
@@ -1818,6 +1835,36 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 77a40a81485d57642af5cf08dd0f01cd, type: 3}
+--- !u!1 &1837123866
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1837123867}
+  m_Layer: 0
+  m_Name: "\u6AA2\u67E5\u5730\u677F"
+  m_TagString: Untagged
+  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1837123867
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1837123866}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.98, y: -0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 911515251}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1925941228
 GameObject:
   m_ObjectHideFlags: 0
