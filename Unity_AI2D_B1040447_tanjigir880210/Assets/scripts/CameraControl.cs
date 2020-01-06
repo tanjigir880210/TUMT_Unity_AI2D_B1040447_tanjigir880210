@@ -16,9 +16,9 @@ public class CameraControl : MonoBehaviour
     {
         Vector3 cam = transform.position;
         Vector3 tar = target.position;
-        tar.x = Mathf.Clamp(tar.x, -1, 30);
+        tar.x = Mathf.Clamp(tar.x, -1, 135);
         tar.z = -2;
-        tar.y = Mathf.Clamp(tar.y, 0, 1);
+        tar.y = Mathf.Clamp(tar.y, 0, 8);
         transform.position = Vector3.Lerp(cam, tar, 0.3f * Time.deltaTime * speed);
     }
 }

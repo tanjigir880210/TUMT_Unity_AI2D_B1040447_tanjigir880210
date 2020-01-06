@@ -11,9 +11,9 @@ public class NPC : MonoBehaviour
     public state _state;
 
     [Header("對話內容")]
-    public string saystart = "KID:我需要你幫我一件事";
-    public string saynotcomplete = "你還沒完成任務";
-    public string saycomplete = "感謝你完成任務";
+    public string saystart = "KID:呼叫太空人! 現在有個緊急事件,魔王佔領了水晶收藏區,我需要你找到3塊水晶,以防止魔王利用水晶毀滅世界。";
+    public string saynotcomplete = "KID:還沒找完,時間不等人的,快快快!";
+    public string saycomplete = "KID:感謝你幫助我的忙,不然世界就真的沒了,這份恩情我會報答你的,我現在幫你傳送回人類世界。";
 
     [Header("對話速度")]
     public float speed = 0.01f;
