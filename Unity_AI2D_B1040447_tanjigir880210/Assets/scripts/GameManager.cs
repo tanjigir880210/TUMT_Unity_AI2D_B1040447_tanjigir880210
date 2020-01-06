@@ -1,13 +1,12 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class GM : MonoBehaviour
+public class GameManager : MonoBehaviour
 {
     public void Replay()
     {
-        SceneManager.LoadScene("遊戲");
+        SceneManager.LoadScene("scene");
     }
-
     public void Quit()
     {
         Application.Quit();
