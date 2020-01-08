@@ -26,6 +26,7 @@ public class NPC : MonoBehaviour
     [Header("介面")]
     public GameObject objCanvas;
     public Text textSay;
+    public GameObject final;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -60,6 +61,7 @@ public class NPC : MonoBehaviour
                 break;
             case state.complete:
                 StartCoroutine(ShowDialog(saycomplete));
+                final.SetActive(true);
                 break;
         }
     }

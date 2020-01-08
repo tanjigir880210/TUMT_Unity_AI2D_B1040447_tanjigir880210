@@ -30,6 +30,8 @@ public class astronaut : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.LeftArrow)) Turn(180);
         if (Input.GetKeyDown(KeyCode.RightArrow)) Turn(0);
+        if (Input.GetKeyDown(KeyCode.A)) Turn(180);
+        if (Input.GetKeyDown(KeyCode.D)) Turn(0);
     }
     private void FixedUpdate()
     {
