@@ -13,7 +13,7 @@ public class NPC : MonoBehaviour
     [Header("對話內容")]
     public string saystart = "KID:緊急事件呼叫太空人! KID:魔王佔領了水晶保護區 KID:我需要你找到3塊水晶 KID:以防止魔王利用水晶毀滅世界";
     public string saynotcomplete = "KID:還沒找到啊! KID:時間不等人快快快";
-    public string saycomplete = "KID:感謝你的幫忙 KID:不然世界就真的沒了 KID:我現在幫你傳送回人類世界";
+    public string saycomplete = "KID:感謝你的幫忙 KID:不然世界就真的沒了 KID:我現在幫你傳送回地球";
 
     [Header("對話速度")]
     public float speed = 0.01f;
@@ -48,7 +48,11 @@ public class NPC : MonoBehaviour
         objCanvas.SetActive(true);
         StopAllCoroutines();
 
-        if (countPlayer >= countFinish) _state = state.complete;
+        if (countPlayer >= countFinish)
+        {
+            _state = state.complete;
+            Invoke("END", 3f);
+        } 
 
         switch (_state)
         {
@@ -61,7 +65,6 @@ public class NPC : MonoBehaviour
                 break;
             case state.complete:
                 StartCoroutine(ShowDialog(saycomplete));
-                final.SetActive(true);
                 break;
         }
     }
@@ -92,5 +95,10 @@ public class NPC : MonoBehaviour
     public void PlayerGet()
     {
         countPlayer++;
+    }
+
+    void END()
+    {
+        final.SetActive(true);
     }
 }

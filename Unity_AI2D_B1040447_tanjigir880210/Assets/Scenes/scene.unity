@@ -658,7 +658,7 @@ MonoBehaviour:
     KID:\u6211\u9700\u8981\u4F60\u627E\u52303\u584A\u6C34\u6676 KID:\u4EE5\u9632\u6B62\u9B54\u738B\u5229\u7528\u6C34\u6676\u6BC0\u6EC5\u4E16\u754C"
   saynotcomplete: "KID:\u9084\u6C92\u627E\u5230\u554A! KID:\u6642\u9593\u4E0D\u7B49\u4EBA\u5FEB\u5FEB\u5FEB"
   saycomplete: "KID:\u611F\u8B1D\u4F60\u7684\u5E6B\u5FD9 KID:\u4E0D\u7136\u4E16\u754C\u5C31\u771F\u7684\u6C92\u4E86
-    KID:\u6211\u73FE\u5728\u5E6B\u4F60\u50B3\u9001\u56DE\u4EBA\u985E\u4E16\u754C"
+    KID:\u6211\u73FE\u5728\u5E6B\u4F60\u50B3\u9001\u56DE\u5730\u7403"
   speed: 0.01
   missingcomplete: 0
   countPlayer: 0
@@ -722,7 +722,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: b0bdb8b8524ff88438046e567e5a7418, type: 3}
     m_FontSize: 20
     m_FontStyle: 0
     m_BestFit: 0
@@ -1276,7 +1276,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: b0bdb8b8524ff88438046e567e5a7418, type: 3}
     m_FontSize: 50
     m_FontStyle: 0
     m_BestFit: 0
@@ -1830,7 +1830,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: b0bdb8b8524ff88438046e567e5a7418, type: 3}
     m_FontSize: 45
     m_FontStyle: 0
     m_BestFit: 1
@@ -4865,7 +4865,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: b0bdb8b8524ff88438046e567e5a7418, type: 3}
     m_FontSize: 50
     m_FontStyle: 0
     m_BestFit: 1
@@ -5211,7 +5211,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: b0bdb8b8524ff88438046e567e5a7418, type: 3}
     m_FontSize: 20
     m_FontStyle: 0
     m_BestFit: 0
@@ -5331,7 +5331,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: b0bdb8b8524ff88438046e567e5a7418, type: 3}
     m_FontSize: 50
     m_FontStyle: 0
     m_BestFit: 1
@@ -5408,7 +5408,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: b0bdb8b8524ff88438046e567e5a7418, type: 3}
     m_FontSize: 20
     m_FontStyle: 0
     m_BestFit: 0
@@ -5565,7 +5565,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: b0bdb8b8524ff88438046e567e5a7418, type: 3}
     m_FontSize: 20
     m_FontStyle: 0
     m_BestFit: 0
@@ -5718,7 +5718,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: b0bdb8b8524ff88438046e567e5a7418, type: 3}
     m_FontSize: 45
     m_FontStyle: 0
     m_BestFit: 1
@@ -5730,7 +5730,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u76F8\u4FE1\u8D70\u5230\u9019\u88E1\u6642\u5DF2\u7D93\n\u6536\u96C6\u52303\u584A\u6C34\u6676,\u73FE\u5728\n\u53EF\u5F9E\u53F3\u908A\u4E0A\u53BB\u901A\u9053\u5230\n\u8D77\u9EDE,\u628A\u6C34\u6676\u4EA4\u7D66\u9AB7\u9ACF\n\u770B\u5B88\u3002"
+  m_Text: "\u76F8\u4FE1\u8D70\u5230\u9019\u88E1\u6642\u5DF2\u7D93\n\u6536\u96C6\u52303\u584A\u6C34\u6676,\u73FE\u5728\n\u53EF\u5F9E\u53F3\u908A\u4E0A\u53BB\u901A\u9053\u5230\n\u8D77\u9EDE,\u628A\u6C34\u6676\u4EA4\u7D66\u9AB7\n\u9ACF\u770B\u5B88KID\u3002"
 --- !u!222 &1656821858
 CanvasRenderer:
   m_ObjectHideFlags: 0
